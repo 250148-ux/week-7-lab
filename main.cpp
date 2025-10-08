@@ -1,8 +1,108 @@
 #include <iostream>
 using namespace std;
 
+/*Problem 5
+int main() {
+    char moretransitions;
+    int balance = 500, deposit, withdraw, action;
+    do {
+        cout << "1. Deposit\n2. Withdraw\n3. Check balance\n"
+        "Please enter what you the action you want to do (1-3): ";
+        cin >> action;
+        switch (action) {
+            case 1: cout << "Enter the amount you want to deposit: ";
+                cin >> deposit;
+                balance+=deposit;
+                break;
+            case 2: cout << "Enter the amount you want to withdraw: ";
+                cin >> withdraw;
+                if (withdraw > balance) {
+                    cout << "Insufficient balance!\n";
+                } else if (withdraw < balance) {
+                    balance-=withdraw;
+                } break;
+            case 3: cout << "Balance is: $" << balance << endl;
+                break;
+            default: cout << "Invalid action!\n";
+        }
 
+        cout << "Do you wan to continue? (y/n):";
+        cin >> moretransitions;
+    } while (moretransitions == 'y' || moretransitions == 'Y');
 
+    return 0;
+}*/
+
+/*Problem 9
+int main() {
+    while (true) {
+        cout << "Create a password: ";
+        string password;
+        cin >> password;
+
+        bool digit = false;
+        bool upper = false;
+        bool lower = false;
+        bool special = false;
+
+        for (char c : password) {
+            if ('0' <= c && c <= '9') digit = true;
+            else if ('A' <= c && c <= 'Z') upper = true;
+            else if ('a' <= c && c <= 'z') lower = true;
+            else if ('!' <= c && c <= '.' || ':' <=c && '@' <= c) special = true;
+        }
+        bool strongpassword = true;
+        if (password.size() < 8) {
+            cout << "Password is too short (must be at least 8 characters)\n";
+            strongpassword = false;
+        }
+        if (!upper) {
+            cout << "Password must contain at least one uppercase letter\n";
+            strongpassword = false;
+        }
+        if (!lower) {
+            cout << "Password must contain at least one lowercase letter\n";
+            strongpassword = false;
+        }
+        if (!digit) {
+            cout << "Password must contain at least one digit\n";
+            strongpassword = false;
+        }
+        if (!special) {
+            cout << "Password must contain at least one special letter\n";
+            strongpassword = false;
+        }
+        if (strongpassword == true) {
+            cout << "Password is strong!" << endl;
+            break;
+        }
+        cout << "Please try again.\n\n";
+    }
+
+    return 0;
+}*/
+
+/*Problem 7
+void parkfee (int fee) {
+    cout << "Parking fee is: " << fee << endl;
+}
+int main () {
+    int hours, fee=0;
+    cout << "Enter the hours of parking: ";
+    cin >> hours;
+    if (hours>=0 && hours<3) {
+        fee+=0;
+    } else if (hours>=3 && hours<6) {
+        fee+=hours*2;
+    } else if (hours>=6) {
+        fee+=hours*5;
+    } else {
+        cout << "Please enter a valid hours" << endl;
+    }
+    parkfee(fee);
+
+    return 0;
+}*/
 
 /*Problem 8
 int pricecalculator (int&a, int&b, int&c, int&d) {
